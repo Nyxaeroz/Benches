@@ -1,0 +1,306 @@
+[gd_scene load_steps=74 format=3 uid="uid://84cjbv8fb7jj"]
+
+[ext_resource type="Script" path="res://vignettes/vignette_script.gd" id="1_64s8o"]
+[ext_resource type="PackedScene" uid="uid://bn12j3k5fvsnk" path="res://vignettes/bench_scene.tscn" id="2_5el6f"]
+[ext_resource type="Texture2D" uid="uid://c0r0k2ec5xuxy" path="res://vignettes/wijnhaven/wijnhaven.jpg" id="3_jvcul"]
+[ext_resource type="Texture2D" uid="uid://7if48uj3j2in" path="res://vignettes/wijnhaven/purple.png" id="4_y64di"]
+[ext_resource type="Texture2D" uid="uid://dbe8juv6s8hf2" path="res://vignettes/wijnhaven/blue.png" id="5_imkla"]
+[ext_resource type="Texture2D" uid="uid://dmyvs5unlrv7p" path="res://vignettes/witte_de_withstraat/witte_de_withstraat.jpg" id="6_7348h"]
+[ext_resource type="Texture2D" uid="uid://dloa5mnlxx754" path="res://vignettes/witte_de_withstraat/purple1.png" id="7_lxcj5"]
+[ext_resource type="Texture2D" uid="uid://wshtl5jb4jg8" path="res://vignettes/witte_de_withstraat/purple2.png" id="8_jjkkb"]
+[ext_resource type="Texture2D" uid="uid://cl2hpc6kwy8ib" path="res://vignettes/witte_de_withstraat/blue.png" id="9_hpynw"]
+[ext_resource type="Texture2D" uid="uid://b8oi3jtdnykv8" path="res://vignettes/metro/metro.jpg" id="10_xhqvv"]
+[ext_resource type="Texture2D" uid="uid://5vcqpu1cmfc2" path="res://vignettes/metro/purple.png" id="11_wtxd6"]
+[ext_resource type="Texture2D" uid="uid://ddq1266nqch5y" path="res://vignettes/metro/blue.png" id="12_7ht81"]
+[ext_resource type="Texture2D" uid="uid://fl31wtwkye0f" path="res://vignettes/nieuwemaas/nieuwemaas.jpg" id="13_yrodo"]
+[ext_resource type="Texture2D" uid="uid://ccyesoie1kof1" path="res://vignettes/nieuwemaas/purple1.png" id="14_a3g0a"]
+[ext_resource type="Texture2D" uid="uid://dad71fm72bt6y" path="res://vignettes/nieuwemaas/purple2.png" id="15_6woym"]
+[ext_resource type="Texture2D" uid="uid://0aa0l6l0s4qn" path="res://vignettes/nieuwemaas/purple3.png" id="16_n2w0r"]
+[ext_resource type="Texture2D" uid="uid://rpwbbtdnx6i7" path="res://vignettes/nieuwemaas/purple5.png" id="17_jh7cb"]
+[ext_resource type="Texture2D" uid="uid://bn2wt5u011obg" path="res://vignettes/nieuwemaas/blue.png" id="18_40s8v"]
+[ext_resource type="Texture2D" uid="uid://dd7plq1wr0r8m" path="res://vignettes/boompjes/boompjes.jpg" id="19_s5qgw"]
+[ext_resource type="Texture2D" uid="uid://b0wsfkn1byx3h" path="res://vignettes/boompjes/purple.png" id="20_vo4jo"]
+[ext_resource type="Texture2D" uid="uid://bp2dt8kij4apg" path="res://vignettes/boompjes/blue.png" id="21_ewu6u"]
+[ext_resource type="Texture2D" uid="uid://dqmovu2n7rc2i" path="res://vignettes/chabot/chabot.jpg" id="22_k1ebq"]
+[ext_resource type="Texture2D" uid="uid://bfrabfchp3xgn" path="res://vignettes/chabot/purple1.png" id="23_cnhl7"]
+[ext_resource type="Texture2D" uid="uid://86747d1rj7p5" path="res://vignettes/chabot/purple2.png" id="24_5fhr2"]
+[ext_resource type="Texture2D" uid="uid://cxt12pyymn5rs" path="res://vignettes/chabot/purple3.png" id="25_cew04"]
+[ext_resource type="Texture2D" uid="uid://c2fn001kt21lp" path="res://vignettes/chabot/purple4.png" id="26_0b675"]
+[ext_resource type="Texture2D" uid="uid://dhu0h5e7k5i5q" path="res://vignettes/chabot/blue.png" id="27_vs8kq"]
+[ext_resource type="Texture2D" uid="uid://d2hm5iye4882u" path="res://vignettes/dirk/dirk.jpg" id="28_w6tmu"]
+[ext_resource type="Texture2D" uid="uid://dtt6xaw48w5c4" path="res://vignettes/dirk/purple.png" id="29_7jr1w"]
+[ext_resource type="Texture2D" uid="uid://dopylnvi0p7a2" path="res://vignettes/dirk/blue.png" id="30_n0pu3"]
+[ext_resource type="Texture2D" uid="uid://cgepxnghqfjo7" path="res://vignettes/depot/depot.jpg" id="31_vqg4a"]
+[ext_resource type="Texture2D" uid="uid://ccs2ynce8bcnw" path="res://vignettes/depot/purple1.png" id="32_qblit"]
+[ext_resource type="Texture2D" uid="uid://buldrjyfg6vo8" path="res://vignettes/depot/purple3.png" id="33_8ucps"]
+[ext_resource type="Texture2D" uid="uid://xwd4xb0phomi" path="res://vignettes/depot/blue.png" id="34_qbfnn"]
+[ext_resource type="Texture2D" uid="uid://daj5hpd3lxliy" path="res://vignettes/maashaven/maashaven.jpg" id="35_yg7hv"]
+[ext_resource type="Texture2D" uid="uid://23bysu1pgqhu" path="res://vignettes/maashaven/purple1.png" id="36_byb2m"]
+[ext_resource type="Texture2D" uid="uid://d17o6qlrxmrh1" path="res://vignettes/maashaven/purple3.png" id="37_ta10c"]
+[ext_resource type="Texture2D" uid="uid://b156kbp51yfbw" path="res://vignettes/maashaven/purple5.png" id="38_35tvj"]
+[ext_resource type="Texture2D" uid="uid://8hq3s0xq8nsy" path="res://vignettes/maashaven/blue.png" id="39_tpfta"]
+[ext_resource type="Texture2D" uid="uid://guf5mj3cnu61" path="res://vignettes/beurs/beurs.jpg" id="40_cb3tf"]
+[ext_resource type="Texture2D" uid="uid://blkrjwd1n04b1" path="res://vignettes/beurs/purple1.png" id="41_ly3nu"]
+[ext_resource type="Texture2D" uid="uid://deax2f7i805mf" path="res://vignettes/beurs/purple2.png" id="42_cvlvi"]
+[ext_resource type="Texture2D" uid="uid://i1dovc1etltk" path="res://vignettes/beurs/purple3.png" id="43_0vobw"]
+[ext_resource type="Texture2D" uid="uid://cjntoi7h82yr" path="res://vignettes/beurs/purple4.png" id="44_gw68x"]
+[ext_resource type="Texture2D" uid="uid://dem6twaakuekn" path="res://vignettes/beurs/purple5.png" id="45_hhc3y"]
+[ext_resource type="Texture2D" uid="uid://8kxb4werh3p8" path="res://vignettes/beurs/blue.png" id="46_2k6xf"]
+[ext_resource type="Texture2D" uid="uid://c7nc3wwgq6u0j" path="res://vignettes/zuidplein/zuidplein.jpg" id="47_255pf"]
+[ext_resource type="Texture2D" uid="uid://cxvrlh5ufpg6q" path="res://vignettes/zuidplein/purple1.png" id="48_6xxui"]
+[ext_resource type="Texture2D" uid="uid://bhv0s40ldg7wl" path="res://vignettes/zuidplein/purple2.png" id="49_2daar"]
+[ext_resource type="Texture2D" uid="uid://be82mlufu3hdq" path="res://vignettes/zuidplein/blue.png" id="50_a5eg2"]
+[ext_resource type="Texture2D" uid="uid://dp7qmqanvdnwc" path="res://vignettes/centraal/centraal.jpg" id="51_v0reu"]
+[ext_resource type="Texture2D" uid="uid://c8fhdj4v7fbiw" path="res://vignettes/centraal/purple1.png" id="52_a3akc"]
+[ext_resource type="Texture2D" uid="uid://dyyjqari5b56g" path="res://vignettes/centraal/purple2.png" id="53_u2iy3"]
+[ext_resource type="Texture2D" uid="uid://bc5tm0hqhucao" path="res://vignettes/centraal/purple3.png" id="54_l7gp8"]
+[ext_resource type="Texture2D" uid="uid://dklb78tb5eaqo" path="res://vignettes/centraal/purple4.png" id="55_iyxau"]
+[ext_resource type="Texture2D" uid="uid://dxr5iur7bxo0e" path="res://vignettes/centraal/blue.png" id="56_flpv2"]
+[ext_resource type="Texture2D" uid="uid://b051t05wx2hef" path="res://vignettes/leuvehoofd/leuvehoofd.jpg" id="57_fl42n"]
+[ext_resource type="Texture2D" uid="uid://owkn33u5joim" path="res://vignettes/leuvehoofd/purple.png" id="58_m1ms4"]
+[ext_resource type="Texture2D" uid="uid://l6a5fbgnljb4" path="res://vignettes/leuvehoofd/blue.png" id="59_p08s7"]
+[ext_resource type="Texture2D" uid="uid://dcg4n420gkf7c" path="res://vignettes/museumpark/museumpark.jpg" id="60_1ua5u"]
+[ext_resource type="Texture2D" uid="uid://csfpnmi1w2kle" path="res://vignettes/museumpark/purple1.png" id="61_3g12h"]
+[ext_resource type="Texture2D" uid="uid://qcf0c1tke46p" path="res://vignettes/museumpark/purple2.png" id="62_mol8g"]
+[ext_resource type="Texture2D" uid="uid://bpcmxrm1dsrii" path="res://vignettes/museumpark/blue.png" id="63_jv50e"]
+[ext_resource type="Texture2D" uid="uid://cadaxo2rvc5v8" path="res://vignettes/willemskade/willemskade.jpg" id="64_sk7j1"]
+[ext_resource type="Texture2D" uid="uid://cd3k5wimivf3a" path="res://vignettes/willemskade/purple1.png" id="65_3srwh"]
+[ext_resource type="Texture2D" uid="uid://cnk7ipbm0nivc" path="res://vignettes/willemskade/purple2.png" id="66_i1vp8"]
+[ext_resource type="Texture2D" uid="uid://0g5r48qvher4" path="res://vignettes/willemskade/blue.png" id="67_jq56x"]
+[ext_resource type="Texture2D" uid="uid://gsggdrtwnpfo" path="res://vignettes/erasmusbrug/erasmusbrug.jpg" id="68_44rxh"]
+[ext_resource type="Texture2D" uid="uid://2q1cmenkd3gb" path="res://vignettes/erasmusbrug/purple.png" id="69_4norc"]
+[ext_resource type="Texture2D" uid="uid://c37ojsugscl85" path="res://vignettes/erasmusbrug/blue.png" id="70_y30ke"]
+[ext_resource type="Script" path="res://QTE/qte_script.gd" id="71_la4lt"]
+[ext_resource type="Texture2D" uid="uid://c1cmhwk8ss3rq" path="res://QTE/marker_purple.png" id="72_rxeax"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wauv4"]
+bg_color = Color(0.877589, 0.404205, 0.703369, 1)
+
+[node name="Vignette" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_64s8o")
+
+[node name="Background" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 3
+
+[node name="top-left" type="PanelContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wauv4")
+
+[node name="top-middle" type="PanelContainer" parent="MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(640, 480)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="wijnhaven" parent="MarginContainer/GridContainer" instance=ExtResource("2_5el6f")]
+visible = false
+layout_mode = 2
+photo_img = ExtResource("3_jvcul")
+purple_imgs = Array[Texture2D]([ExtResource("4_y64di"), ExtResource("4_y64di"), ExtResource("4_y64di")])
+coordinates = Array[Vector2]([Vector2(215, 336), Vector2(300, 336), Vector2(380, 336)])
+blue_img = ExtResource("5_imkla")
+pos_blue = Vector2(110, 336)
+
+[node name="wittedewith" parent="MarginContainer/GridContainer" instance=ExtResource("2_5el6f")]
+visible = false
+layout_mode = 2
+photo_img = ExtResource("6_7348h")
+purple_imgs = Array[Texture2D]([ExtResource("7_lxcj5"), ExtResource("7_lxcj5"), ExtResource("8_jjkkb")])
+coordinates = Array[Vector2]([Vector2(107, 319), Vector2(177, 319), Vector2(284, 339)])
+blue_img = ExtResource("9_hpynw")
+pos_blue = Vector2(455, 341)
+
+[node name="metro" parent="MarginContainer/GridContainer" instance=ExtResource("2_5el6f")]
+visible = false
+layout_mode = 2
+photo_img = ExtResource("10_xhqvv")
+purple_imgs = Array[Texture2D]([ExtResource("11_wtxd6")])
+coordinates = Array[Vector2]([Vector2(422, 256)])
+blue_img = ExtResource("12_7ht81")
+pos_blue = Vector2(157, 247)
+
+[node name="nieuwemaas" parent="MarginContainer/GridContainer" instance=ExtResource("2_5el6f")]
+visible = false
+layout_mode = 2
+photo_img = ExtResource("13_yrodo")
+purple_imgs = Array[Texture2D]([ExtResource("14_a3g0a"), ExtResource("15_6woym"), ExtResource("16_n2w0r"), ExtResource("16_n2w0r"), ExtResource("17_jh7cb")])
+coordinates = Array[Vector2]([Vector2(233, 374), Vector2(306, 375), Vector2(359, 387), Vector2(452, 398), Vector2(573, 298)])
+blue_img = ExtResource("18_40s8v")
+pos_blue = Vector2(126, 326)
+
+[node name="boompjes" parent="MarginContainer/GridContainer" instance=ExtResource("2_5el6f")]
+visible = false
+layout_mode = 2
+photo_img = ExtResource("19_s5qgw")
+purple_imgs = Array[Texture2D]([ExtResource("20_vo4jo")])
+coordinates = Array[Vector2]([Vector2(313, 260)])
+blue_img = ExtResource("21_ewu6u")
+pos_blue = Vector2(492, 281)
+
+[node name="chabot" parent="MarginContainer/GridContainer" instance=ExtResource("2_5el6f")]
+visible = false
+layout_mode = 2
+photo_img = ExtResource("22_k1ebq")
+purple_imgs = Array[Texture2D]([ExtResource("23_cnhl7"), ExtResource("24_5fhr2"), ExtResource("25_cew04"), ExtResource("26_0b675")])
+coordinates = Array[Vector2]([Vector2(288, 286), Vector2(370, 275), Vector2(471, 246), Vector2(552, 220)])
+blue_img = ExtResource("27_vs8kq")
+pos_blue = Vector2(168, 328)
+
+[node name="dirk" parent="MarginContainer/GridContainer" instance=ExtResource("2_5el6f")]
+visible = false
+layout_mode = 2
+photo_img = ExtResource("28_w6tmu")
+purple_imgs = Array[Texture2D]([ExtResource("29_7jr1w"), ExtResource("29_7jr1w"), ExtResource("29_7jr1w")])
+coordinates = Array[Vector2]([Vector2(177, 317), Vector2(256, 317), Vector2(322, 317)])
+blue_img = ExtResource("30_n0pu3")
+pos_blue = Vector2(430, 344)
+
+[node name="depot" parent="MarginContainer/GridContainer" instance=ExtResource("2_5el6f")]
+visible = false
+layout_mode = 2
+photo_img = ExtResource("31_vqg4a")
+purple_imgs = Array[Texture2D]([ExtResource("32_qblit"), ExtResource("32_qblit"), ExtResource("33_8ucps")])
+coordinates = Array[Vector2]([Vector2(227, 315), Vector2(403, 322), Vector2(538, 322)])
+blue_img = ExtResource("34_qbfnn")
+pos_blue = Vector2(92, 312)
+
+[node name="maashaven" parent="MarginContainer/GridContainer" instance=ExtResource("2_5el6f")]
+visible = false
+layout_mode = 2
+photo_img = ExtResource("35_yg7hv")
+purple_imgs = Array[Texture2D]([ExtResource("36_byb2m"), ExtResource("36_byb2m"), ExtResource("37_ta10c"), ExtResource("37_ta10c"), ExtResource("38_35tvj"), ExtResource("38_35tvj")])
+coordinates = Array[Vector2]([Vector2(183, 397), Vector2(262, 397), Vector2(347, 384), Vector2(422, 384), Vector2(511, 380), Vector2(594, 380)])
+blue_img = ExtResource("39_tpfta")
+pos_blue = Vector2(101, 396)
+
+[node name="beurs" parent="MarginContainer/GridContainer" instance=ExtResource("2_5el6f")]
+visible = false
+layout_mode = 2
+photo_img = ExtResource("40_cb3tf")
+purple_imgs = Array[Texture2D]([ExtResource("41_ly3nu"), ExtResource("42_cvlvi"), ExtResource("43_0vobw"), ExtResource("44_gw68x"), ExtResource("45_hhc3y")])
+coordinates = Array[Vector2]([Vector2(144, 212), Vector2(193, 230), Vector2(264, 261), Vector2(390, 296), Vector2(510, 308)])
+blue_img = ExtResource("46_2k6xf")
+pos_blue = Vector2(100, 203)
+
+[node name="zuidplein" parent="MarginContainer/GridContainer" instance=ExtResource("2_5el6f")]
+visible = false
+layout_mode = 2
+photo_img = ExtResource("47_255pf")
+purple_imgs = Array[Texture2D]([ExtResource("48_6xxui"), ExtResource("49_2daar")])
+coordinates = Array[Vector2]([Vector2(163, 288), Vector2(473, 226)])
+blue_img = ExtResource("50_a5eg2")
+pos_blue = Vector2(232, 201)
+
+[node name="centraal" parent="MarginContainer/GridContainer" instance=ExtResource("2_5el6f")]
+visible = false
+layout_mode = 2
+photo_img = ExtResource("51_v0reu")
+purple_imgs = Array[Texture2D]([ExtResource("52_a3akc"), ExtResource("53_u2iy3"), ExtResource("54_l7gp8"), ExtResource("55_iyxau")])
+coordinates = Array[Vector2]([Vector2(112, 349), Vector2(229, 290), Vector2(384, 286), Vector2(507, 283)])
+blue_img = ExtResource("56_flpv2")
+pos_blue = Vector2(321, 326)
+
+[node name="leuvehoofd" parent="MarginContainer/GridContainer" instance=ExtResource("2_5el6f")]
+visible = false
+layout_mode = 2
+photo_img = ExtResource("57_fl42n")
+purple_imgs = Array[Texture2D]([ExtResource("58_m1ms4")])
+coordinates = Array[Vector2]([Vector2(151, 289)])
+blue_img = ExtResource("59_p08s7")
+pos_blue = Vector2(491, 284)
+
+[node name="museumpark" parent="MarginContainer/GridContainer" instance=ExtResource("2_5el6f")]
+visible = false
+layout_mode = 2
+photo_img = ExtResource("60_1ua5u")
+purple_imgs = Array[Texture2D]([ExtResource("61_3g12h"), ExtResource("62_mol8g")])
+coordinates = Array[Vector2]([Vector2(154, 236), Vector2(513, 187)])
+blue_img = ExtResource("63_jv50e")
+pos_blue = Vector2(380, 324)
+
+[node name="willemskade" parent="MarginContainer/GridContainer" instance=ExtResource("2_5el6f")]
+visible = false
+layout_mode = 2
+photo_img = ExtResource("64_sk7j1")
+purple_imgs = Array[Texture2D]([ExtResource("65_3srwh"), ExtResource("66_i1vp8")])
+coordinates = Array[Vector2]([Vector2(385, 240), Vector2(521, 247)])
+blue_img = ExtResource("67_jq56x")
+pos_blue = Vector2(88, 253)
+
+[node name="erasmusbrug" parent="MarginContainer/GridContainer" instance=ExtResource("2_5el6f")]
+visible = false
+layout_mode = 2
+photo_img = ExtResource("68_44rxh")
+purple_imgs = Array[Texture2D]([ExtResource("69_4norc"), ExtResource("69_4norc"), ExtResource("69_4norc")])
+coordinates = Array[Vector2]([Vector2(150, 400), Vector2(259, 379), Vector2(380, 357)])
+blue_img = ExtResource("70_y30ke")
+pos_blue = Vector2(555, 366)
+
+[node name="top-right" type="PanelContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wauv4")
+
+[node name="bottom-left" type="PanelContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wauv4")
+
+[node name="bottom-middle" type="PanelContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wauv4")
+
+[node name="QTE" type="PanelContainer" parent="MarginContainer/GridContainer/bottom-middle"]
+custom_minimum_size = Vector2(600, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("71_la4lt")
+
+[node name="marker" type="Sprite2D" parent="MarginContainer/GridContainer/bottom-middle/QTE"]
+position = Vector2(300, 25)
+texture = ExtResource("72_rxeax")
+
+[node name="bottom-right" type="PanelContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wauv4")
+
+[connection signal="finished" from="MarginContainer/GridContainer/bottom-middle/QTE" to="." method="_on_qte_finished"]

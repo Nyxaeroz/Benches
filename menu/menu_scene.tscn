@@ -1,0 +1,111 @@
+[gd_scene load_steps=13 format=3 uid="uid://c46l4aajkai5b"]
+
+[ext_resource type="Script" path="res://menu/menu_script.gd" id="1_83vq4"]
+[ext_resource type="Texture2D" uid="uid://ctctbly6iykgh" path="res://vignettes/brienenoord/brienenoord.jpg" id="2_0ixbc"]
+[ext_resource type="PackedScene" uid="uid://6wr6dbmikp0u" path="res://menu/UI/sound_button_scene.tscn" id="3_j8e23"]
+[ext_resource type="AudioStream" uid="uid://cn6dcxuhi730" path="res://audio/blap.wav" id="4_b07h2"]
+[ext_resource type="Texture2D" uid="uid://dn3ifr6ds8j47" path="res://menu/UI/info.png" id="5_f1sho"]
+[ext_resource type="Texture2D" uid="uid://ooxhcu4kc7a1" path="res://menu/UI/info-hover.png" id="6_adt4h"]
+[ext_resource type="Texture2D" uid="uid://cm2t2vk28nog8" path="res://menu/UI/quit.png" id="7_1ppca"]
+[ext_resource type="Texture2D" uid="uid://dh7bjp0rsveni" path="res://menu/UI/quit-hover.png" id="8_gug0o"]
+[ext_resource type="Texture2D" uid="uid://dqswlu18ytc1w" path="res://menu/big-blue.png" id="9_d2jps"]
+[ext_resource type="Texture2D" uid="uid://bvntre5fjuitq" path="res://menu/UI/frame.png" id="10_33qry"]
+[ext_resource type="FontFile" uid="uid://den63jafruvsy" path="res://fonts/NotCourierSans.ttf" id="11_q2ad6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r66c4"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_83vq4")
+
+[node name="BackgroundImg" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1152, 480)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_top = -215.0
+offset_right = 576.0
+offset_bottom = 937.0
+grow_horizontal = 2
+texture = ExtResource("2_0ixbc")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="ButtonContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 917.0
+offset_top = 411.0
+offset_right = 1117.0
+offset_bottom = 591.0
+theme_override_constants/separation = 15
+
+[node name="Button-Start" parent="ButtonContainer" instance=ExtResource("3_j8e23")]
+layout_mode = 2
+hover_sfx = ExtResource("4_b07h2")
+click_sfx = ExtResource("4_b07h2")
+
+[node name="Button-Info" parent="ButtonContainer" instance=ExtResource("3_j8e23")]
+layout_mode = 2
+texture_normal = ExtResource("5_f1sho")
+texture_hover = ExtResource("6_adt4h")
+hover_sfx = ExtResource("4_b07h2")
+click_sfx = ExtResource("4_b07h2")
+
+[node name="Button-Quit" parent="ButtonContainer" instance=ExtResource("3_j8e23")]
+layout_mode = 2
+texture_normal = ExtResource("7_1ppca")
+texture_hover = ExtResource("8_gug0o")
+hover_sfx = ExtResource("4_b07h2")
+
+[node name="Blue" type="Sprite2D" parent="."]
+position = Vector2(132, 460)
+scale = Vector2(0.29191, 0.29191)
+texture = ExtResource("9_d2jps")
+
+[node name="InfoPanel" type="PanelContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(600, 480)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -240.0
+offset_right = 320.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.993012)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_r66c4")
+
+[node name="Frame" type="Sprite2D" parent="InfoPanel"]
+position = Vector2(320, 240)
+texture = ExtResource("10_33qry")
+
+[node name="Text" type="RichTextLabel" parent="InfoPanel"]
+modulate = Color(0.192157, 0.133333, 0.172549, 1)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("11_q2ad6")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "[center]Benches is about connection between people. It is also an open letter to the municipality of Rotterdam regarding the hostile architecture they employ to control urban space.
+
+All photos were taken in Rotterdam. Thank you, Michael Murtaugh, for letting me use the Brienenoord photo that inspired this project.
+
+Font: NotCourierSans by OSP
+[/center]"
+fit_content = true
+
+[connection signal="pressed" from="ButtonContainer/Button-Start" to="." method="_on_button_start_pressed"]
+[connection signal="pressed" from="ButtonContainer/Button-Info" to="." method="_on_button_info_pressed"]
+[connection signal="pressed" from="ButtonContainer/Button-Quit" to="." method="_on_button_quit_pressed"]

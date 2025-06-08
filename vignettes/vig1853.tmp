@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://84cjbv8fb7jj"]
+
+[ext_resource type="PackedScene" uid="uid://bn12j3k5fvsnk" path="res://vignettes/bench_scene.tscn" id="1_thv8d"]
+[ext_resource type="Texture2D" uid="uid://78xhjb0rtu2o" path="res://vignettes/brienenoord/placeholder-purple.png" id="2_xun22"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wauv4"]
+bg_color = Color(0.877589, 0.404205, 0.703369, 1)
+
+[node name="Vignette" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 3
+
+[node name="top-left" type="PanelContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wauv4")
+
+[node name="bench-scene" parent="MarginContainer/GridContainer" instance=ExtResource("1_thv8d")]
+layout_mode = 2
+purple_imgs = Array[Texture2D]([ExtResource("2_xun22")])
+coordinates = Array[Vector2]([Vector2(600, 350), Vector2(200, 150), Vector2(3, 3)])
+
+[node name="top-right" type="PanelContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wauv4")
+
+[node name="bottom-left" type="PanelContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wauv4")
+
+[node name="bottom-middle" type="PanelContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wauv4")
+
+[node name="bottom-right" type="PanelContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wauv4")

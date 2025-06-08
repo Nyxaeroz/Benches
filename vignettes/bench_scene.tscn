@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bn12j3k5fvsnk"]
+
+[ext_resource type="Texture2D" uid="uid://bbmc0t52u8o7u" path="res://vignettes/brienenoord/placeholder-photo.jpg" id="1_01emx"]
+[ext_resource type="Script" path="res://vignettes/bench_script.gd" id="1_hj8vk"]
+[ext_resource type="Texture2D" uid="uid://bh2ray7ykqr4b" path="res://vignettes/brienenoord/placeholder-blue.png" id="2_e2w1u"]
+[ext_resource type="AudioStream" uid="uid://purahj6exv24" path="res://audio/maashaven.ogg" id="4_dr4v5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wauv4"]
+bg_color = Color(0.877589, 0.404205, 0.703369, 1)
+
+[node name="bench-scene" type="PanelContainer"]
+custom_minimum_size = Vector2(640, 480)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wauv4")
+script = ExtResource("1_hj8vk")
+photo_img = ExtResource("1_01emx")
+blue_img = ExtResource("2_e2w1u")
+
+[node name="Photo" type="TextureRect" parent="."]
+layout_mode = 2
+expand_mode = 2
+
+[node name="Blue" type="Sprite2D" parent="."]
+position = Vector2(113, 298)
+
+[node name="Purple" type="Sprite2D" parent="."]
+position = Vector2(528, 344)
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_dr4v5")

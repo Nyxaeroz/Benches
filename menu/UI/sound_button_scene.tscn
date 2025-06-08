@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://6wr6dbmikp0u"]
+
+[ext_resource type="Texture2D" uid="uid://c2wya2gnsd5pe" path="res://menu/UI/start.png" id="1_7kbsh"]
+[ext_resource type="Texture2D" uid="uid://c0lb03pcq7plq" path="res://menu/UI/start-hover.png" id="2_7xv74"]
+[ext_resource type="Script" path="res://menu/UI/sound_button_script.gd" id="3_vxpns"]
+[ext_resource type="AudioStream" uid="uid://cv0swd1x6vx02" path="res://audio/plolop.wav" id="4_f886t"]
+
+[node name="Button-Start" type="TextureButton"]
+custom_minimum_size = Vector2(200, 50)
+texture_normal = ExtResource("1_7kbsh")
+texture_hover = ExtResource("2_7xv74")
+script = ExtResource("3_vxpns")
+
+[node name="HoverSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_f886t")
+
+[node name="ClickSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_f886t")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="finished" from="ClickSFX" to="." method="_on_click_sfx_finished"]

@@ -1,0 +1,35 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Benches"
+run/main_scene="res://splashscreen/boot_scene.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+boot_splash/bg_color=Color(0.929412, 0.929412, 0.929412, 1)
+boot_splash/image="res://splashscreen/splashscreen-white-base.png"
+config/icon="res://QTE/marker_purple.png"
+
+[display]
+
+window/size/initial_position_type=2
+window/stretch/mode="viewport"
+
+[gui]
+
+theme/default_font_hinting=2
+theme/default_font_subpixel_positioning=0
+theme/default_font_multichannel_signed_distance_field=true
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=2
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
